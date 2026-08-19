@@ -1,0 +1,23 @@
+🔒 Built a fully local, private AI chat app — no cloud, no API keys, no data leaving the device.
+
+"Local Chat" is a Flutter app that talks exclusively to a local Ollama server. Every token is generated on your own hardware — nothing is ever sent to a third-party API.
+
+A few things I focused on:
+
+⚡ Real-time streaming — responses are consumed line-by-line as newline-delimited JSON straight from Ollama's /api/chat endpoint and rendered live, with an animated typing indicator while the model "thinks"
+
+📝 Clean Markdown rendering — code blocks and formatting render properly in the chat, not as raw text
+
+🎛️ Model switching on the fly — the app lists whatever models you've pulled locally, so swapping between them takes one tap
+
+⚙️ Flexible connectivity — works on desktop out of the box, and includes the config needed to reach Ollama from an Android emulator or a real device over your LAN
+
+🎨 A UI that doesn't feel like a dev tool — soft off-white theme, indigo/coral accents, rounded bubbles, Inter typography
+
+This was a good exercise in the parts of AI app development that don't get talked about enough: streaming protocols, platform-level networking permissions (cleartext HTTP exceptions on Android/iOS/macOS), and making sure the raw plumbing of an LLM API never leaks into the UI.
+
+Privacy-first AI tooling is only going to matter more — glad to have this one in the portfolio.
+
+Code + full setup guide on GitHub: [link]
+
+#Flutter #Ollama #LocalLLM #AI #MobileDevelopment #OpenSource #PrivacyFirst #Dart #SoftwareEngineering
